@@ -1,0 +1,162 @@
+/******************************************************************
+Stylesheet: Variables
+******************************************************************/
+
+$phone: 480px;
+$tablet-portrait: 767px;
+$tablet-landscape: 980px;
+$laptop: 1200px;
+$desktop: 1920px;
+
+
+/*********************
+Blog Styles
+*********************/
+
+.post-list {
+  h3 {
+    font-weight:normal;
+  }
+  .post-excerpt { 
+    font-weight:normal;
+    font-size:18px;
+    margin-bottom:30px;
+  }
+  .post-box {
+    margin-bottom:20px;
+    border:1px solid #efefef;
+    @media (min-width: $tablet-portrait) {
+      width:calc((100% - 20px)/2);
+      &:nth-child(even){
+        margin-right:0;
+      }
+      &:nth-child(odd){
+        clear:left;
+      }
+    }
+    @media (min-width: $tablet-landscape) {
+      padding:178px 5% 183px;
+    }
+    @media (min-width: $phone) and (max-width: $tablet-landscape) {
+      width:calc((100% - 20px)/2);
+      &:nth-child(even){
+        margin-right:0;
+      }
+      &:nth-child(odd){
+        clear:left;
+      }
+    }
+    @media (min-width: $laptop) {
+      width:calc((100% - 40px)/3);
+      &:nth-child(3n+3){
+        margin-right:0;
+      }
+      &:nth-child(3n+1){
+        clear:left;
+      }
+    }
+  }
+  .box-content {
+    padding:30px;
+    @media (min-width: $tablet-landscape) {
+      min-height:310px;
+    }
+    @media (min-width: $laptop) {
+      min-height:382px;
+    }
+  }
+  .featured-image-box {
+    display:block;
+    background-size:cover;
+    img {
+      width:100%;
+    }
+  }
+  .post-meta {
+    color:$gray;
+    text-transform:capitalize;
+    font-weight:normal;
+    font-size:14px;
+    a {
+      color:$blue;
+    }
+  }
+}
+
+
+.blog-category-select {
+  height:50px;
+  padding:8px 16px !important;
+  letter-spacing:1px;
+  background-color:#fff;
+  border-radius:3px;
+  border:1px solid #c9cacb;
+  font-size:18px;
+  width:100%;
+  font-weight:300;
+  color:#75787b;
+  &:focus {
+      border-color:#c9cacb;
+    }
+}
+
+
+.after-posts {
+  clear:both;
+  text-align:center;
+  padding: 41px 0 0;
+  margin-bottom: 9px;
+  .after-post-component {
+    &.hidden {
+      display:none;
+    }
+  }
+}
+
+
+
+/*
+ *  Usage:
+ *
+      <div class="sk-double-bounce">
+        <div class="sk-child sk-double-bounce1"></div>
+        <div class="sk-child sk-double-bounce2"></div>
+      </div>
+ *
+ */
+.sk-double-bounce {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  margin: 40px auto; }
+  .sk-double-bounce .sk-child {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #333;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-animation: sk-doubleBounce 2s infinite ease-in-out;
+            animation: sk-doubleBounce 2s infinite ease-in-out; }
+  .sk-double-bounce .sk-double-bounce2 {
+    -webkit-animation-delay: -1.0s;
+            animation-delay: -1.0s; }
+
+@-webkit-keyframes sk-doubleBounce {
+  0%, 100% {
+    -webkit-transform: scale(0);
+            transform: scale(0); }
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+
+@keyframes sk-doubleBounce {
+  0%, 100% {
+    -webkit-transform: scale(0);
+            transform: scale(0); }
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+
